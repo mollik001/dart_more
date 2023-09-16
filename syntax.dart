@@ -9,7 +9,7 @@ void main() {
    */
   var name = 'mollik';
   String name1 = 'mollik';
-  print(name + name1);
+  // print(name + name1);
 
   //DYNAMIC
   //dynamic work as the same way as var, more or less. the differences are given below.
@@ -41,8 +41,7 @@ void main() {
   var a = 10;
   var res =
       a > 12 ? "value greater than 10" : "value lesser than or equal to 10";
-  print(
-      res); // it returns "value greater than 10":"value lesser than or equal to 10"
+  // print( res); // it returns "value greater than 10":"value lesser than or equal to 10"
 
   // num1 ?? num2
   // if num1 is non-null, returns num1. otherwise returns num2.
@@ -50,5 +49,38 @@ void main() {
   var i = null;
   var j = 12;
   var res2 = i ?? j;
-  print(res2); // returns 12
+  // print(res2); // returns 12
+
+  // LOOP ----> 1. Definite loop : for loop.
+  //            2. Indefinite loope : while , do-while loop.
+
+  for (int i = 0; i <= 10; i++) {
+    if (i == 6) {
+      break; // this loop will print 0 to 5
+    }
+    // print("$i number line in the loop");
+  }
+  // print("loop ended");
+
+  //print some odd number using for loop and continue keyword:
+
+  for (int k = 1; k <= 10; k++) {
+    if (k % 2 == 0) {
+      continue; //will skip all the value that are divisible by 2
+    }
+    //print(k);
+  }
+
+//it works like abs function
+  int negativeNum = -200;
+  int positiveNum = 0;
+  int count = 0;
+
+  if (negativeNum < 0) {
+    for (int i = negativeNum; i < 0; i++) {
+      count++;
+      positiveNum = count;
+    }
+  }
+  print(positiveNum);
 }
