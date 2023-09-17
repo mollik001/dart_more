@@ -46,9 +46,9 @@ void main() {
   // num1 ?? num2
   // if num1 is non-null, returns num1. otherwise returns num2.
 
-  var i = null;
-  var j = 12;
-  var res2 = i ?? j;
+  var q = null;
+  var w = 12;
+  var res2 = q ?? w;
   // print(res2); // returns 12
 
   // LOOP ----> 1. Definite loop : for loop.
@@ -123,11 +123,59 @@ void main() {
       max = myList1[i];
     }
   }
-  print(max);
+  //print(max);
   for (int i = 0; i < myList1.length; i++) {
     if (min > myList1[i]) {
       min = myList1[i];
     }
   }
-  print(min);
+  //print(min);
+
+// task: remove duplicate item from a list:
+
+  List<int> listWithDuplicateItem = [1, 2, 2, 6, 6, 8, 2, 9, 6];
+  List<int> uniqueList = [];
+
+  for (int i = 0; i < listWithDuplicateItem.length; i++) {
+    bool isDuplicate = false;
+
+    for (int j = i + 1; j < listWithDuplicateItem.length; j++) {
+      if (listWithDuplicateItem[i] == listWithDuplicateItem[j]) {
+        isDuplicate = true;
+        break; // No need to continue checking
+      }
+    }
+
+    if (!isDuplicate) {
+      uniqueList.add(listWithDuplicateItem[i]);
+    }
+  }
+
+  listWithDuplicateItem = uniqueList;
+  //print(listWithDuplicateItem);
+
+  //Write a Dart program that merges two sorted lists of integers into a single sorted list:
+
+  List<int> list1 = [1, 3, 5, 7, 9];
+  List<int> list2 = [2, 4, 6, 8, 10];
+  List<int> mergedList = [];
+
+  int i = 0; // Index for list1
+  int j = 0; // Index for list2
+
+  while (i < list1.length && j < list2.length) {
+    if (list1[i] < list2[j]) {
+      mergedList.add(list1[i]);
+      i++;
+    } else {
+      mergedList.add(list2[j]);
+      j++;
+    }
+  }
+
+  //this part for adding any remaining elements.
+  mergedList.addAll(list1.sublist(i));
+  mergedList.addAll(list2.sublist(j));
+
+  print(mergedList);
 }
