@@ -82,5 +82,52 @@ void main() {
       positiveNum = count;
     }
   }
-  print(positiveNum);
+  //print(positiveNum);
+
+  //LIST
+
+  List<int> myList = List<int>.filled(5,
+      0); // a list with the size of 5 and each index is filled with 0 initially.
+
+  // now you can assign value for each element
+  myList[1] = 1;
+  myList[2] = 2;
+  myList[3] = 3;
+  myList[4] = 4;
+
+  //print(myList);
+
+  List<dynamic> lst = [1, 2, 3, 4];
+  // print(lst);
+
+  // calculate the sum and avg of the items of the list:
+  List<int> list = [2, 4, 6, 8, 10];
+  int sum = 0;
+  int avg = 0;
+  for (int i = 0; i < list.length; i++) {
+    //print(list[i]);
+
+    sum = sum + list[i];
+  }
+  //print(sum);
+  avg = (sum / list.length).toInt();
+  //print(avg);
+
+  //find the maxium and minimum value in the list :
+
+  List<int> myList1 = [4, 2, 3, 1, 5, 6, 7];
+  int max = myList1[0];
+  int min = myList1[0];
+  for (int i = 0; i < myList1.length; i++) {
+    if (max < myList1[i]) {
+      max = myList1[i];
+    }
+  }
+  print(max);
+  for (int i = 0; i < myList1.length; i++) {
+    if (min > myList1[i]) {
+      min = myList1[i];
+    }
+  }
+  print(min);
 }
