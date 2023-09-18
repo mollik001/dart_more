@@ -177,5 +177,32 @@ void main() {
   mergedList.addAll(list1.sublist(i));
   mergedList.addAll(list2.sublist(j));
 
-  print(mergedList);
+  //print(mergedList);
+
+  //MAP -- is a data format consist of Key-Value pair.
+  // Key can not be duplicate. but value can be duplicate.
+
+  var studentInfo = new Map();
+  studentInfo['name'] = 'mollik';
+  studentInfo['age'] = 25;
+  studentInfo['good at'] = 'cricket';
+  // print(studentInfo.keys); // to print all the keys
+  // print(studentInfo.values); // to print all the values
+  // print(studentInfo); // to print key-value pair.
+
+  studentInfo.addAll({
+    'hobby': 'reading book',
+    'favourite food': 'kacchi'
+  }); //to add multiple key-value in an existing Map
+  //print(studentInfo);
+
+  studentInfo.remove('favourite food');
+
+  //print(studentInfo);
+
+  Map<String, int> ages = {
+    'Alice': 25,
+    'Bob': 30,
+    'Charlie': 22
+  }; //another way to declare a map
 }
