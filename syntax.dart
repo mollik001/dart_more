@@ -205,4 +205,28 @@ void main() {
     'Bob': 30,
     'Charlie': 22
   }; //another way to declare a map
+
+  //ENUMERATION
+
+  // print(Process_Status.values);
+  mul(10, 20);
+}
+
+enum Process_Status { none, running, stopped, paused }
+
+int? mul(int a, int b) {
+  int c;
+  c = a + b;
+  //print("The sum is:${c}");
+
+  print(factorial(5));
+}
+
+//Recursion
+int factorial(int num) {
+  if (num <= 1) {
+    return 1;
+  } else {
+    return num * factorial(num - 1);
+  }
 }
