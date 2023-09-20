@@ -69,4 +69,48 @@
       }  
 
 */
-void main() {}
+
+void main() {
+  var terrarium = new Terrarium(); //creating object of Terrarium class.
+  terrarium.doCare(
+      "closed lid"); //getting access of the method of Terrarium class through object.
+
+  Student student = new Student(20, "molliks");
+  student.whichClass(20);
+}
+
+//Constructor.
+//there are 3 types of constructor.
+// Default constructor, Parameterized constructor and Named constructor.
+
+// className.constructor_name(param_list)   --> Named constructor.
+
+class Student {
+  int age;
+  String name;
+  // Declaring a construstor
+  Student(this.age, this.name) {
+    print("The name is: ${name}");
+    print("The age is: ${age}");
+  }
+
+  void whichClass(int age) {
+    if (age < 25) {
+      print("I am undergraduated");
+    } else {
+      print("I am graduated");
+    }
+  }
+}
+
+class Terrarium {
+  String openTerrarium = "open lid";
+  String closeTerrarium = "closed lid";
+  void doCare(String lidStatus) {
+    if (lidStatus == openTerrarium) {
+      print("I need to be watered");
+    } else {
+      print("I don't need to be watered");
+    }
+  }
+}
