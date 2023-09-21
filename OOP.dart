@@ -77,6 +77,10 @@ void main() {
 
   Student student = new Student(20, "molliks");
   student.whichClass(20);
+  print(unKnown.longDistance); // getting a static variable.
+  unKnown.longDistance =
+      "changed distance"; // You can modify the value of static without an object.
+  print(unKnown.longDistance);
 }
 
 //Constructor.
@@ -113,4 +117,10 @@ class Terrarium {
       print("I don't need to be watered");
     }
   }
+}
+
+class unKnown {
+  static String longDistance =
+      "I dont need an object"; // static variable, can be accessed from another class even without an object.
+  String notStatic = "I need object";
 }
