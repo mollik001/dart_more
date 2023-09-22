@@ -77,10 +77,16 @@ void main() {
 
   Student student = new Student(20, "molliks");
   student.whichClass(20);
-  print(unKnown.longDistance); // getting a static variable.
+  //print(unKnown.longDistance); // getting a static variable.
   unKnown.longDistance =
       "changed distance"; // You can modify the value of static without an object.
-  print(unKnown.longDistance);
+  //print(unKnown.longDistance);
+
+  Boy b = new Boy(); // Creating Object of Boy class
+  Girl g = new Girl(); // Creating Object of Girl class
+
+  b.displayInfo();
+  g.displayInfo();
 }
 
 //Constructor.
@@ -123,4 +129,26 @@ class unKnown {
   static String longDistance =
       "I dont need an object"; // static variable, can be accessed from another class even without an object.
   String notStatic = "I need object";
+}
+
+//ABSTRACT CLASS
+
+abstract class Person {
+//declaring abstract method
+
+  void displayInfo(); //abstract method
+}
+
+class Boy extends Person {
+// Overriding method
+  void displayInfo() {
+    print("My name is Mollik");
+  }
+}
+
+class Girl extends Person {
+// Overriding method
+  void displayInfo() {
+    print("My name is Tim Tim");
+  }
 }
